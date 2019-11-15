@@ -4,9 +4,11 @@
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h2 class="section-heading">Let's Get In Touch!</h2>
                 <hr class="primary">
-                <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                <p>Contact us to arrange your trip</p>
             </div>
-        <div class="col-lg-2 col-lg-offset-2 text-center">
+
+            {% include form.html %}
+        <!-- <div class="col-lg-2 col-lg-offset-2 text-center">
             <a href="https://twitter.com/{{ site.twitter_username }}">
                 <i class="fa fa-twitter fa-3x wow bounceIn" data-wow-delay=".2s"></i>
                 <p>{{ site.twitter_username }}</p>
@@ -23,7 +25,118 @@
             <i class="fa fa-facebook fa-3x wow bounceIn" data-wow-delay=".6s"></i>
                 <p>{{ site.github_username }}</p>
             </a>
-        </div>
+        </div> -->
 
     </div>
 </section>
+
+<style>
+form {
+        width: 300px;
+        margin: 20px auto;
+}
+
+fieldset {
+    position: relative;
+    border: none;  
+}
+
+label {
+    position: absolute;  
+    top: 18px;
+    color: rgba(0, 0, 0, 0.3);
+    transform-origin: left;
+    transition: all 0.3s ease;
+}
+
+input[type=submit] {
+    color: white;
+    border-radius: 5px;
+    background: #556573;
+}
+
+input:focus ~ label {
+    color: red;  
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: 0;
+    transform: scale(0.6, 0.6);
+}
+
+input {
+    font-size: 20px;  
+    width: 100%;
+    border: none;  
+    margin-top: 10px;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid #556573;
+    transition: all 0.8s ease;
+}
+
+.after {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, red 50%, transparent 50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: all 0.6s ease;
+}
+
+textarea {
+    width: 100%;
+    border: none;
+    font-size: 20px;
+}
+
+textarea:focus {
+    border-bottom: 2px solid #556573;
+    transition: all 0.8s ease;
+}
+
+input:focus ~ .after {
+    background-position: 0 0;
+}
+
+button {
+    position: relative;
+    width: 100%;
+    font-size: 20px;  
+    font-family: system-ui, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    margin-top: 20px;
+    padding: 2px 10px;
+    color: rgba(0, 0, 0, 0.4);
+    background: white;
+    border: none;
+    background: linear-gradient(to right, red 50%, transparent 50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: all 0.6s ease;
+}
+
+button:before {
+    position: absolute;
+    content: "Submit";
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+    display: block;
+    background-color: white;
+}
+
+button:active,
+button:focus,
+button:hover {
+    outline: none;
+    background-position: 0 0;
+    color: red;
+}
+</style>
