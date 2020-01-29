@@ -61,6 +61,13 @@ p {
     }
 }
 
+@media (min-width: 992px) {
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
 section {
     padding: 100px 0;
 }

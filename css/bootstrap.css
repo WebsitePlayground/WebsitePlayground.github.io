@@ -1583,12 +1583,6 @@ pre code {
         width: 970px;
     }
 }
-@media (min-width: 992px) {
-    .row {
-        display: flex;
-        justify-content: space-between;
-    }
-}
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
