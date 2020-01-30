@@ -61,6 +61,11 @@ p {
     }
 }
 
+.copyright {
+    display: flex;
+    justify-content: space-around;
+}
+
 @media (min-width: 992px) {
     .row {
         display: block;
