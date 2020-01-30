@@ -67,6 +67,10 @@ p {
     padding-top: 30px;
 }
 
+.row {
+    display: block;
+}
+
 @media (min-width: 992px) {
     .row {
         display: block;
