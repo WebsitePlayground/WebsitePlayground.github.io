@@ -63,7 +63,7 @@ p {
 
 @media (min-width: 992px) {
     .row {
-        display: flex;
+        display: block;
         justify-content: space-between;
     }
 }
